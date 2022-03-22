@@ -15,7 +15,7 @@ time7DaysAgo = int(time.time()) - 604800
 # connection checker 0 = not connected / 1 = connected / if error close connection and set _c to 0 for restart
 _c = 0 
 
-####
+#######
 
 # ----------------PostgreSQL connection --------------#
 def connect():
