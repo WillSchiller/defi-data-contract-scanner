@@ -16,8 +16,7 @@ _c = 0 # connection checker 0 = not connected / 1 = connected / if error close c
 
 
 
-#PostgreSQL connections
-
+# -------------- PostgreSQL connections ------------- #
 def connect():
     conn = psycopg2.connect(
         host = os.getenv('PSQL_HOST'),
@@ -30,9 +29,23 @@ def connect():
     return conn
 
 connection = connect()
-# --------------------- HELPERS --------------------- #
 
-txdatacontracts = "CREATE TABLE IF NOT EXISTS txdatacontracts(timestamp INTEGER, blocknumber INTEGER, gas INTEGER, gasPrice Bigint, _from TEXT, _to TEXT, contractAddress TEXT, value DECIMAL)"
+
+# --------------------- HELPERS --------------------- #
+txdatacontracts = ''' 
+
+CREATE TABLE IF NOT EXISTS txdatacontracts(
+    timestamp INTEGER,
+    blocknumber INTEGER,
+    gas INTEGER,
+    gasPrice Bigint,
+    _from TEXT,
+    _to TEXT,
+    contractAddress TEXT,
+    value DECIMAL
+    )
+
+                  '''
 
 def executeSql(sql):
     conn = connect()
@@ -61,7 +74,6 @@ def getLatestBlock():
 
 
 def processTx(tx_hash):
-    
     try:
         tx = w3.eth.get_transaction(tx_hash)
         if tx['to'] == None:

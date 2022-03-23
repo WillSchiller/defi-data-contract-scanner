@@ -40,7 +40,6 @@ connection, cursor = connect()
 
     
 # --------------------- HELPERS --------------------- #
-
 top_contracts_tx_count = "CREATE TABLE IF NOT EXISTS top_contracts_tx_count(timestamp INTEGER, blocknumber INTEGER, gas INTEGER, gasPrice Bigint, _from TEXT, contractAddress TEXT, tx_count DECIMAL, eth NUMERIC)"
 top_contracts_value = "CREATE TABLE IF NOT EXISTS top_contracts_value(timestamp INTEGER, blocknumber INTEGER, gas INTEGER, gasPrice Bigint, _from TEXT, contractAddress TEXT, tx_count DECIMAL, eth NUMERIC)"
 
