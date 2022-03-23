@@ -1,6 +1,6 @@
-# ETH SCANNER
+# CONTRACT SCANNER 
 
-- ETH SCANNER is the data pipeline behind Defi Data [Contract Scanner](https://www.defidata.dev/contracts)
+- CONTRACT SCANNER is the data pipeline behind Defi Data [Contract Scanner](https://www.defidata.dev/contracts)
  - Code licensed under GNU3
  - Built with Python3 & PostgreSQL on Ubuntu Server 20.04
 
