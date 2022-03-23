@@ -23,7 +23,7 @@ python main.py
 The **main.py** script scans continuously for the latest block and when it finds a new one (every ~13 seconds) it decodes the data and processes all the transactions within that block. The data is then pushed to a PostgreSQL db to be processed later. 
 
 
-In order to aggregate the data and see the top 20 contracts by total ETH & total transactions can run:
+In order to aggregate the data and see the top contracts by total ETH & total transactions can run:
 ```
 python aggregate_stats.py
 ```
